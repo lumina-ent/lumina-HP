@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社ルミナエンターテインメント</title>
+    
+    <!-- Tailwind CSS (デザイン用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons (アイコン用) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- アニメーション用の初期スタイル -->
+    <style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(2.5rem);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#f8f9fc] text-slate-800 font-sans selection:bg-blue-500/30">
+
+    <!-- ナビゲーション -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="company_logo.png" alt="株式会社ルミナエンターテインメント" class="h-8 md:h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                <span class="text-xl md:text-2xl font-black tracking-tighter text-blue-800 hidden">
+                    ルミナエンターテインメント
+                </span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-bold tracking-widest text-slate-500">
+                <a href="#about" class="hover:text-blue-600 transition-colors">私たちについて</a>
+                <a href="#services" class="hover:text-blue-600 transition-colors">事業内容</a>
+                <a href="#company" class="hover:text-blue-600 transition-colors">会社概要</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative bg-gradient-to-b from-white to-[#f0f4f8]">
+        <div class="space-y-4 max-w-4xl z-10">
+            <h2 class="text-blue-600 font-bold tracking-widest animate-pulse mt-12">
+                エンターテインメントの追求
+            </h2>
+            <h1 class="text-5xl md:text-8xl font-black leading-tight tracking-tighter text-slate-900 py-4">
+                好奇心が、<br />
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+                    世界を照らす。
+                </span>
+            </h1>
+            <p class="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed pt-6 font-medium">
+                株式会社ルミナエンターテインメントは、自由で飽くなき好奇心を持つ「猫」のように、
+                キャラクターIPを核とした新しいエンターテインメントの形を模索し続けます。
+            </p>
+        </div>
+        <div class="absolute bottom-10 animate-bounce">
+            <i data-lucide="chevron-down" class="text-slate-400 w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- 私たちについて -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="fade-in-section grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-slate-900">エンタメの追求、<br />それは自由であること。</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6 font-medium">
+                        私たちのシンボルである「猫」は、何にも縛られず、自らの好奇心の向かう先を全力で楽しみます。
+                        株式会社ルミナエンターテインメントは、その精神をビジネスの核に据えています。
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-medium">
+                        デジタルコンテンツ、VR、ASMR、そして次世代のデジタルアート。
+                        形式に囚われることなく、クリエイターの情熱が「映える」最高の体験を世界へ届けます。
+                    </p>
+                </div>
+                <div class="relative group flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center bg-slate-50 rounded-full border border-slate-100 shadow-inner">
+                        <img src="brand_logo.svg" alt="Lumina Brand Symbol" class="w-full h-full object-contain filter drop-shadow-xl p-4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="hidden flex-col items-center justify-center text-slate-400 text-sm font-bold">
+                            <i data-lucide="sparkles" class="w-12 h-12 mb-2 text-blue-300"></i>
+                            <span>BRAND LOGO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 事業内容 -->
+    <section id="services" class="py-24 bg-[#f8f9fc]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black mb-4 tracking-tighter text-slate-900">事業内容</h3>
+                <p class="text-slate-600 font-medium">キャラクターIPを起点に、デジタルの海を縦横無尽に開拓します。</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch max-w-4xl mx-auto">
+                <!-- デジタルコンテンツ -->
+                <div class="group relative bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 flex flex-col h-full transform hover:-translate-y-1 duration-300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center mb-6 shadow-md shrink-0">
+                        <i data-lucide="monitor-play" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-900 shrink-0">デジタルコンテンツ</h4>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium flex-grow">
+                        ASMR、ゲーム、映像。最新のテクノロジーとキャラクターIPを融合させた次世代のコンテンツ体験を企画・制作。
+                    </p>
+                </div>
+                <!-- WEBサービス -->
+                <div class="group relative bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 flex flex-col h-full transform hover:-translate-y-1 duration-300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white flex items-center justify-center mb-6 shadow-md shrink-0">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-900 shrink-0">WEBサービス・通信販売</h4>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium flex-grow">
+                        キャラクターIPの魅力を最大化するため、インターネットを利用した情報提供サービスや、オンラインストア等を通じた独自コンテンツの通信販売を展開します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要 -->
+    <section id="company" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="fade-in-section bg-[#f0f4f8] rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
+                <h3 class="text-3xl font-bold mb-10 flex items-center text-slate-900">
+                    <i data-lucide="building-2" class="mr-4 text-blue-600 w-8 h-8"></i>
+                    会社概要
+                </h3>
+                <div class="space-y-6">
+                    <!-- 会社名 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">会社名</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">株式会社ルミナエンターテインメント</div>
+                    </div>
+                    <!-- 英語名 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">英語名</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">Lumina Entertainment Inc.</div>
+                    </div>
+                    <!-- 代表取締役 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">代表取締役</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">竹下 尚輝</div>
+                    </div>
+                    <!-- 所在地 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">所在地</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">〒150-0044 東京都渋谷区円山町5番3号 MIEUX渋谷ビル8階</div>
+                    </div>
+                    <!-- 設立 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">設立</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">2026年2月13日</div>
+                    </div>
+                    <!-- 資本金 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">資本金</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">30万円</div>
+                    </div>
+                    <!-- 電話番号 -->
+                    <div class="flex flex-col md:flex-row md:items-start border-b border-slate-200 pb-4 pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">電話番号</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">050-8896-0825</div>
+                    </div>
+                    <!-- 事業内容 -->
+                    <div class="flex flex-col md:flex-row md:items-start pt-2">
+                        <span class="text-slate-500 text-sm font-bold w-full md:w-48 mb-2 md:mb-0 tracking-widest mt-1">事業内容</span>
+                        <div class="text-slate-800 text-lg font-medium flex-1">
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                <li>デジタルコンテンツ（映像、音楽、音声、画像、ゲーム等）の企画、制作、配信及び販売</li>
+                                <li>インターネットを利用した各種情報提供サービス及び通信販売業務</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-[#0a0b1e] text-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="fade-in-section text-center mb-16">
+                <h3 class="text-4xl font-black mb-4 tracking-tighter">Contact</h3>
+                <p class="text-slate-400 font-medium">お仕事のご依頼から、カジュアルなご相談までお気軽にどうぞ。</p>
+            </div>
+
+            <div class="fade-in-section grid md:grid-cols-2 gap-8">
+                <!-- 総合お問い合わせ -->
+                <div class="bg-white/5 rounded-3xl p-8 md:p-10 border border-white/10 hover:bg-white/10 transition-colors flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center mb-6 shrink-0">
+                        <i data-lucide="mail" class="w-7 h-7 text-blue-400"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 shrink-0">お問い合わせ</h4>
+                    <p class="text-slate-400 mb-8 font-medium flex-grow">
+                        事業に関するご質問、案件のご相談などはこちらからお願いいたします。
+                    </p>
+                    <div class="space-y-4 shrink-0">
+                        <a href="https://forms.gle/DxXv1vNmGCJkbr7s6" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-xl transition-colors shadow-lg shadow-blue-500/25">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                            お問い合わせフォームへ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- カジュアル面談 -->
+                <div class="bg-white/5 rounded-3xl p-8 md:p-10 border border-white/10 hover:bg-white/10 transition-colors flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center mb-6 shrink-0">
+                        <i data-lucide="users" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 shrink-0">カジュアル面談</h4>
+                    <p class="text-slate-400 mb-8 font-medium flex-grow">
+                        共に新しいエンタメを創り上げるクリエイターやパートナー企業様を募集しています。まずはカジュアルにお話ししませんか？
+                    </p>
+                    <div class="space-y-4 shrink-0">
+                        <a href="https://forms.gle/7j8gbfAf19UjLxBK9" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-colors shadow-lg shadow-purple-500/25">
+                            <i data-lucide="users" class="w-5 h-5 mr-2"></i>
+                            お申し込みフォームへ
+                        </a>
+                        <a href="https://x.com/_suimin_kata" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-xl border border-slate-600 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                            代表者に X (旧Twitter) でDMを送る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-8 bg-[#05060f] text-center border-t border-white/10">
+        <p class="text-slate-500 text-sm font-medium tracking-widest">&copy; 2026 Lumina Entertainment Inc. All Rights Reserved.</p>
+    </footer>
+
+    <!-- インタラクション用のJavaScript -->
+    <script>
+        // 1. アイコンの描画初期化
+        lucide.createIcons();
+
+        // 2. スクロール時のナビゲーション背景色変更
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+            }
+        });
+
+        // 3. スクロール時のフェードインアニメーション
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
